@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -78,7 +78,7 @@ main{
 .grams {
    
     background-color: white;
-    width: 455px;
+    max-width: 455px;
     height: 493px;
     border-radius: 15px;
     margin-right: 82px;
@@ -89,6 +89,9 @@ main{
     
 }
 
+.grams:last-child {
+    margin-right: 0;
+}
 .grams-photo {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -125,7 +128,8 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: row;
-    margin: 87px;
+    margin-left: 87px;
+    margin-right: 87px;
     justify-content: space-between;
 }
 
@@ -181,15 +185,14 @@ footer {
 
 /* модальне вікно */
 .modal-window {
+    width: 100%;
     visibility: hidden;
     position: fixed;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin-top: 50px;
     justify-content: center;
-    align-items: center;
-    
-    
+    align-items: center; 
 }
 
 
@@ -199,6 +202,7 @@ footer {
     height: 300px;
     border-radius: 15px;
 }
+
 .modal-header {
     display: flex;
     flex-direction: row;
@@ -221,31 +225,28 @@ footer {
 
 }
 
-
 @media  (max-width: 420px) 
 {
     header {
-        margin-top: 69px;
-        margin-left: 32px;
-        margin-right: 32px;
-        margin-bottom: 0;
+        margin-top: 27px;
+        margin-left: 19px;
+        margin-right: 19px;
     }
 
     footer {
-        flex-direction: column;
         margin-left: 19px;
         margin-right: 19px;
     }
 
     .blogs-box, .mylink-box {
-        width: 338px;
+        width: 100%;
         height: 113px;
         margin-top: 27px;
         margin-bottom: 0;
     }
 
     .blog-image, .mylink-box-icon{
-        width: 108px;
+        width: 118px;
     }
 
     .blogs-title{
@@ -311,6 +312,8 @@ footer {
         margin-right: 17px;
     }
 
+    
+
     .grams-photo {
         width: 189px;
         height: 197px;
@@ -335,6 +338,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        visibility: hidden;
     }
 
     .logo-icon-mobile-img {
@@ -344,6 +348,7 @@ footer {
     }
 
     footer {
+        flex-direction: column;
         justify-content: flex-start;
     }
 }
